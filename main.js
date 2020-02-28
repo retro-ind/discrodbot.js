@@ -8,11 +8,9 @@ client.on('message', msg => {
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'ping') {     
         msg.reply('Pong!');   
-client.on('message', msg => {  
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix) {     
-        msg.reply('Specify Command');   
-client.on('message', msg => {  
+        msg.reply('Specify Command or r-help for command list');   
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'help') {     
         msg.reply('
