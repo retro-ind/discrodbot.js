@@ -25,5 +25,8 @@ client.on('message', msg => {
     if (msg.content.toLowerCase() === prefix+'joke') {     
         msg.channel.send('Your Life' or 'Not right now' or 'Вы шутка, лол' or '***BEAN***');
     }
+    if (msg.content.toLowerCase() === prefix+'v') {     
+        msg.channel.send('V:Alpha 0.0.1');
+    }
 });
 
