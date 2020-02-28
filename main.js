@@ -23,7 +23,7 @@ client.on('message', msg => {
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
     }
     if (msg.content.toLowerCase() === prefix+'joke') {     
-        msg.channel.send('Your Life' or 'Not right now' or 'Вы шутка, лол' or '***BEAN***');
+        msg.channel.send.random(['Your Life','Not right now','Вы шутка, лол','***BEAN***']);
     }
     if (msg.content.toLowerCase() === prefix+'v') {     
         msg.channel.send('V:Alpha 0.0.1 Last update 12:34 PM Friday, February 28, 2020');
