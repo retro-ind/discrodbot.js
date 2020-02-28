@@ -15,9 +15,9 @@ client.on('message', msg => {
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
         msg.reply('
-                  'Command list:'
-                  'r-help : This List!'
-                  'r-ping : Pong!'
+                  \nline1'Command list:'
+                  \nline2'r-help : This List!'
+                  \nline3'r-ping : Pong!'
                   ');
     }
     } 
