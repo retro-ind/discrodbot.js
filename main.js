@@ -5,6 +5,7 @@ client.on('ready', () => {
 });
 var prefix = "r-";
 client.on('message', msg => {  
+    var args = msg.content.split(' ');
     
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'ping') {     
@@ -19,8 +20,13 @@ client.on('message', msg => {
     if (msg.content.toLowerCase() === prefix+'help') {     
         msg.channel.send('\nCommandlist:\n```r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version```');
     }
-    if (msg.content.toLowerCase().startsWith(prefix+'kill') && msg.mentions.users.first() !== undefined ) {     
+    if (msg.content.toLowerCase().startsWith(prefix+'kill') {
+        if ( msg.mentions.users.first() !== undefined ) {
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
+        } else {
+        msg.channel.send(msg.content.substring(args[0].length+1, msg.content.length)+'was killed mercilessly');   
+        }
+        
     }
     var array = ['Your Life','Not right now','Вы шутка, лол','***BEAN***'];
     function choose(choices) {
