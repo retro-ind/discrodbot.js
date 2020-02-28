@@ -17,7 +17,7 @@ client.on('message', msg => {
         msg.channel.send('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.channel.send('\nCommand list:\nr-help : This List!\nr-ping : Pong! \nr-kill (mention user)');
+        msg.channel.send('\nCommand list:\n``` r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user ```');
     }
     if (msg.content.toLowerCase().startsWith(prefix+'kill') && msg.mentions.users.first() !== undefined ) {     
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
