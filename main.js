@@ -22,8 +22,12 @@ client.on('message', msg => {
     if (msg.content.toLowerCase().startsWith(prefix+'kill') && msg.mentions.users.first() !== undefined ) {     
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
     }
+    function choose(choices) {
+    var index = Math.floor(Math.random('Your Life','Not right now','Вы шутка, лол','***BEAN***') * choices.length);
+    return choices[index];
+    }
     if (msg.content.toLowerCase() === prefix+'joke') {     
-        msg.channel.send.random(['Your Life','Not right now','Вы шутка, лол','***BEAN***']);
+        msg.channel.send.choose(awnsers);
     }
     if (msg.content.toLowerCase() === prefix+'v') {     
         msg.channel.send('V:Alpha 0.0.1 Last update 12:34 PM Friday, February 28, 2020');
