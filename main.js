@@ -4,7 +4,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`); 
 });
 var prefix = "r-";
-client.on('message', async msg => {
+client.on('message', msg => {
     var args = msg.content.split(' ');
     
     if(msg.author.bot) return;
@@ -37,6 +37,15 @@ client.on('message', async msg => {
     }
     if (msg.content.toLowerCase() === prefix+'v') {     
         msg.channel.send('V:Alpha 0.0.2 Last Update 12:55 PM Friday, February 28, 2020');
+    }
+    if (msg.content.toLowerCase() === 'cringe') {     
+        msg.channel.send('***WARNING CRINGE NORMIE DETECTED*** \n ***DESTROY CRINGE NORMIE? Y N?***');
+    }
+    if (msg.content.toLowerCase() === prefix+'y') {
+        msg.channel.send('***DESTROYING CRINGE NORMIE***');
+    }
+    if (msg.content.toLowerCase() === prefix+'n') {     
+        msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCLED***');
     }
 });
 
