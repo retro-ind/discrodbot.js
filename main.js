@@ -19,7 +19,7 @@ client.on('message', msg => {
     if (msg.content.toLowerCase() === prefix+'help') {     
         msg.channel.send('\nCommand list:\nr-help : This List!\nr-ping : Pong!');
     }
-    if (msg.content.toLowerCase() === prefix+'kill' && msg.mentions.users.first() !== undefined ) {     
+    if (msg.content.toLowerCase() === .startsWith(prefix+'kill') && msg.mentions.users.first() !== undefined ) {     
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
     }
 });
