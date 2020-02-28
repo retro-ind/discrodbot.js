@@ -14,11 +14,11 @@ client.on('message', msg => {
         msg.reply('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.reply(
-                  \nline1'Command list:' 
-                  \nline2'r-help : This List!'
-                  \nline3'r-ping : Pong!'
-                  );
+        msg.reply('
+                  \n'Command list:' 
+                  \n'r-help : This List!'
+                  \n'r-ping : Pong!'
+                  ');
     
     }
     } 
