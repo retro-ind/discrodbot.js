@@ -8,6 +8,18 @@ client.on('message', msg => {
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'ping') {     
         msg.reply('Pong!');   
+client.on('message', msg => {  
+    if(msg.author.bot) return;
+    if (msg.content.toLowerCase() === prefix) {     
+        msg.reply('Specify Command');   
+client.on('message', msg => {  
+    if(msg.author.bot) return;
+    if (msg.content.toLowerCase() === prefix+'help') {     
+        msg.reply('
+                  'Command list:'
+                  'r-help : This List!'
+                  'r-ping : Pong!'
+                  ');   
     } 
 });
-client.login('token');
+
