@@ -45,7 +45,6 @@ client.on('message', msg => {
         msg.channel.send('***DESTROYING CRINGE NORMIE***');
     }
     if (msg.content.toLowerCase() === prefix+'n') {     
-        msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCLED***');
+        msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCELED***');
     }
 });
-
