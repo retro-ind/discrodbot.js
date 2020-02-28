@@ -8,15 +8,18 @@ client.on('message', msg => {
     
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'ping') {     
-        msg.reply('Pong!')};   
+        msg.reply('Pong!');
+    }
     if (msg.content.toLowerCase() === prefix) {     
-        msg.reply('Specify Command or r-help for command list')};   
+        msg.reply('Specify Command or r-help for command list');
+    }
     if (msg.content.toLowerCase() === prefix+'help') {     
         msg.reply('
                   'Command list:'
                   'r-help : This List!'
                   'r-ping : Pong!'
-                  ')};   
+                  ');
+    }
     } 
 });
 
