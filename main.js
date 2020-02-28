@@ -6,7 +6,7 @@ client.on('ready', () => {
 var prefix = "r-";
 client.on('message', msg => {  
     if(msg.author.bot) return;
-    if (msg.content.toLowerCase( === prefix+'ping')) {     
+    if (msg.content.toLowerCase() === prefix+'ping') {     
         msg.reply('Pong!');   
     } 
 });
