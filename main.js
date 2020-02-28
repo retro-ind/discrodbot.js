@@ -9,7 +9,7 @@ client.on('message', msg => {
     
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'ping') {     
-        msg.channel.send('Pong!');
+        msg.channel.send('Pong! Latency '+Math.round(client.ping)+' ms. API latency is '+Math.round(client.ping)+'ms');
     }
     if (msg.mentions.users.first() !== undefined && msg.mentions.users.first().id == client.user.id) {     
         msg.channel.send('What do you want *human*?');
