@@ -17,10 +17,13 @@ client.on('message', msg => {
         msg.channel.send('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.channel.send('\nCommand list:\n``` r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user ```');
+        msg.channel.send('\nCommandlist:\n``` r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user ```');
     }
     if (msg.content.toLowerCase().startsWith(prefix+'kill') && msg.mentions.users.first() !== undefined ) {     
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
+    }
+    if (msg.content.toLowerCase() === prefix+'joke') {     
+        msg.channel.send('Your Life' or 'Not right now' or 'Вы шутка, лол' or '***BEAN***');
     }
 });
 
