@@ -87,7 +87,7 @@ client.on('message', msg => {
         msg.channel.send('V:Alpha 0.0.2 Last Update 12:55 PM Friday, February 28, 2020');
     }
     if (msg.content.toLowerCase() === 'cringe') {     
-        msg.channel.send('***WARNING CRINGE NORMIE DETECTED*** \n ***DESTROY CRINGE NORMIE? YES NO?***');{
+        msg.channel.send('***WARNING CRINGE NORMIE DETECTED*** \n ***DESTROY CRINGE NORMIE? YES, NO?***');{
     }
       if (msg.content.toLowerCase() === (prefix+'yes')) {
         msg.channel.send('***DESTROYING CRINGE NORMIE***');
