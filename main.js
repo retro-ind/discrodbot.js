@@ -10,6 +10,9 @@ client.on('message', msg => {
     if (msg.content.toLowerCase() === prefix+'ping') {     
         msg.channel.send('Pong!');
     }
+    if (msg.mentions.users.first() !== undefined && msg.mentions.users.first().id == client.user.id) {     
+        msg.channel.send('What do you want *human*?');
+    }
     if (msg.content.toLowerCase() === prefix) {     
         msg.channel.send('Specify Command or r-help for command list');
     }
