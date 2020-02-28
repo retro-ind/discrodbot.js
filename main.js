@@ -24,7 +24,7 @@ client.on('message', msg => {
         if (msg.mentions.users.first() !== undefined ) {
             msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
         } else {
-            msg.channel.send(msg.content.substring(args[0].length+1, msg.content.length)+'was killed mercilessly');   
+            msg.channel.send(msg.content.substring(args[0].length+1, msg.content.length)+' was killed mercilessly');   
         }   
    }
    var array = ['Your Life','Not right now','Вы шутка, лол','***BEAN***'];
