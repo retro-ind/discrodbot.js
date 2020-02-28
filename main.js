@@ -17,7 +17,7 @@ client.on('message', msg => {
         msg.channel.send('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.channel.send('\nCommandlist:\n``` r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user ```');
+        msg.channel.send('\nCommandlist:\n```r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version```');
     }
     if (msg.content.toLowerCase().startsWith(prefix+'kill') && msg.mentions.users.first() !== undefined ) {     
         msg.channel.send(msg.mentions.users.first().username+' was killed mercilessly');
@@ -26,7 +26,7 @@ client.on('message', msg => {
         msg.channel.send('Your Life' or 'Not right now' or 'Вы шутка, лол' or '***BEAN***');
     }
     if (msg.content.toLowerCase() === prefix+'v') {     
-        msg.channel.send('V:Alpha 0.0.1');
+        msg.channel.send('V:Alpha 0.0.1 Last update 12:34 PM Friday, February 28, 2020');
     }
 });
 
