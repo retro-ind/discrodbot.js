@@ -53,14 +53,6 @@ client.on('message', msg => {
     if (msg.content.toLowerCase() === 'xd') {     
         msg.channel.send('Are you stupid?');
     }
-    if (msg.content.toLowerCase(prefix + 'avatar')) {
-    const user = msg.mentions.users.first() || msg.author;
-    const avatarEmbed = new Discord.RichEmbed()
-        .setColor(0x333333)
-        .setAuthor(user.username)
-        .setImage(user.avatarURL);
-    msg.channel.send(avatarEmbed);
-    }
 });
 
 
