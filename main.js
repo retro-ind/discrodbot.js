@@ -27,7 +27,7 @@ client.on('message', msg => {
             msg.channel.send(msg.content.substring(args[0].length+1, msg.content.length)+' was killed mercilessly');   
         }   
    }
-    var array = ['Your Life','Not right now','Вы шутка, лол','***BEAN***'];
+    var array = ['Your Life','Not right now','Вы шутка, лол','***BEAN***', 'What’s the best thing about Switzerland? \nI don’t know, but the flag is a big plus.','Why do we tell actors to “break a leg?” \nBecause every play has a cast.','Once my dog ate all the Scrabble tiles. For days he kept leaving little messages around the house.',' '];
     function choose(choices) {
     var index = Math.floor(Math.random() * choices.length);
     return choices[index];
