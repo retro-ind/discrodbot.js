@@ -18,7 +18,7 @@ client.on('message', msg => {
         msg.channel.send('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.channel.send('\nCommandlist:\n```r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version \nr-about : about R.O.B.```');
+        msg.channel.send('\nCommand list:\n```r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version \nr-about : about R.O.B.```');
     }
     if (msg.content.toLowerCase().startsWith(prefix+'kill')) {
         if (msg.mentions.users.first() !== undefined ) {
