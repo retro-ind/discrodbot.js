@@ -53,6 +53,9 @@ client.on('message', msg => {
     if (msg.content.toLowerCase() === 'xd') {     
         msg.channel.send('Are you stupid?');
     }
+    if (msg.content.toLowerCase() === prefix+'owner') {     
+        msg.channel.send('Retro.');
+    }
 });
 
-
+client.login("")
