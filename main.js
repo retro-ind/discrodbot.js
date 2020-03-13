@@ -3,13 +3,15 @@ const client = new Discord.Client();
 client.on('ready', () => {   
     console.log(`Logged in as ${client.user.tag}!`); 
 });
+var cn = false;
+
 var prefix = "r-";
 client.on('message', async msg => {
     var args = msg.content.split(' ');
     
     if(msg.author.bot) return;
     if (msg.content.toLowerCase() === prefix+'ping') {     
-        msg.channel.send(`Pong! API latency is ${Math.round(client.ping)} ms`);
+        msg.channel.send(`Pong! API latency is ${Math.round(client.ws.ping)} ms`);
     }
     if (msg.mentions.users.first() !== undefined && msg.mentions.users.first().id == client.user.id) {     
         msg.channel.send('What do you want *human*?');
@@ -38,14 +40,16 @@ client.on('message', async msg => {
     if (msg.content.toLowerCase() === prefix+'v') {     
         msg.channel.send('V:Alpha 0.0.2 Last Update 7:42 AM Friday, March 2, 2020');
     }
-    if (msg.content.toLowerCase() === 'cringe') {     
-        msg.channel.send('***WARNING CRINGE NORMIE DETECTED*** \n ***DESTROY CRINGE NORMIE? YES, NO?***');{
+    if (msg.content.toLowerCase() === 'cringe') {
+      msg.channel.send('***WARNING CRINGE NORMIE DETECTED*** \n ***DESTROY CRINGE NORMIE? YES, NO?***');
+      cn = true;
     }
-    if (msg.content.toLowerCase() === (prefix+'yes')) {
-        msg.channel.send('***DESTROYING CRINGE NORMIE***');
-    } else {
-    msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCELED***');
-    }
+    if (msg.content.toLowerCase() === (prefix+'yes') || msg.content.toLowerCase() === 'yes' && cn) { 
+      cn = false;
+      msg.channel.send('***DESTROYING CRINGE NORMIE***');
+    } else if (msg.content.toLowerCase() === (prefix+'no') || msg.content.toLowerCase() === 'no' && cn) {
+      cn = false;
+      msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCELED***');
     }
     if (msg.content.toLowerCase() === prefix+'about') {     
         msg.channel.send('R.O.B. (Robotic Operating Buddy) is a toy robot accessory for the Nintendo Entertainment System (NES). It was launched in July 1985 as the Family Computer Robot[a] in Japan, and October 1985 as R.O.B. in North America. Its short lifespan yielded only two games in the Robot Series: Gyromite and Stack-Up.Following the devastating North American video game crash of 1983, Nintendo alleviated the fearful retail market by rebranding its Japanese Famicom video game console as the Nintendo Entertainment System—a new platform focused on R.O.B. to further reclassify the system as a uniquely sophisticated toy experience instead of simply as a video game console. Computer Entertainer magazine in June 1985 called R.O.B. the worlds only interactive robot.');
@@ -58,6 +62,6 @@ client.on('message', async msg => {
     }
 });
 
-client.login("")
+client.login("");
 
 
