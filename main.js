@@ -20,7 +20,7 @@ client.on('message', async msg => {
         msg.channel.send('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.channel.send('\nCommand list:\n```r-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version \nr-about : about R.O.B.```');
+        msg.channel.send('\nCommand list:\n```fix\nr-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version \nr-about : about R.O.B. \nr-owner : who built the bot? \nr-stopxir : stops xir dead in his tracks```');
     }
     if (msg.content.toLowerCase().startsWith(prefix+'kill')) {
         if (msg.mentions.users.first() !== undefined ) {
@@ -38,7 +38,7 @@ client.on('message', async msg => {
         msg.channel.send(choose(array));
     }
     if (msg.content.toLowerCase() === prefix+'v') {     
-        msg.channel.send('V:Alpha 0.0.2 Last Update 7:42 AM Friday, March 2, 2020');
+        msg.channel.send('V:Alpha 0.0.2 Last Update 12:06 PM Friday, March 13, 2020');
     }
     if (msg.content.toLowerCase() === 'cringe') {
       msg.channel.send('***WARNING CRINGE NORMIE DETECTED*** \n ***DESTROY CRINGE NORMIE? YES, NO?***');
@@ -58,10 +58,11 @@ client.on('message', async msg => {
         msg.channel.send('Are you stupid?');
     }
     if (msg.content.toLowerCase() === prefix+'owner') {     
-        msg.channel.send('Retro');
+        msg.channel.send('<@!353191086681882624>');
+    }
+    if (msg.content.toLowerCase() === prefix+'stopxir') {     
+        msg.channel.send(`<@218525899535024129>, don't make me throw cheese at you.`);
     }
 });
 
 client.login("");
-
-
