@@ -49,7 +49,7 @@ client.on('message', async msg => {
       msg.channel.send('***DESTROYING CRINGE NORMIE***');
     } else if (msg.content.toLowerCase() === (prefix+'no') || msg.content.toLowerCase() === 'no' && cn) {
       cn = false;
-      msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCELED***');
+      msg.channel.send('***CRINGE NORMIE DESTRUCTION CANCLED***');
     }
     if (msg.content.toLowerCase() === prefix+'about') {     
         msg.channel.send('R.O.B. (Robotic Operating Buddy) is a toy robot accessory for the Nintendo Entertainment System (NES). It was launched in July 1985 as the Family Computer Robot[a] in Japan, and October 1985 as R.O.B. in North America. Its short lifespan yielded only two games in the Robot Series: Gyromite and Stack-Up.Following the devastating North American video game crash of 1983, Nintendo alleviated the fearful retail market by rebranding its Japanese Famicom video game console as the Nintendo Entertainment System—a new platform focused on R.O.B. to further reclassify the system as a uniquely sophisticated toy experience instead of simply as a video game console. Computer Entertainer magazine in June 1985 called R.O.B. the worlds only interactive robot.');
