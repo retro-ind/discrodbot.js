@@ -61,7 +61,7 @@ client.on('message', async msg => {
         msg.channel.send('<@!353191086681882624>');
     }
     if (msg.content.toLowerCase() === prefix+'stopxir') {     
-        msg.channel.send(`<@218525899535024129>, don't make me throw cheese at you. /<a:2000intslRumiaDance3:660908506911866930>`);
+        msg.channel.send(`<@218525899535024129>, don't make me throw cheese at you. <a:2000intslRumiaDance3:660908506911866930>`);
     }
 });
 
