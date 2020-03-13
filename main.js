@@ -20,7 +20,7 @@ client.on('message', async msg => {
         msg.channel.send('Specify Command or r-help for command list');
     }
     if (msg.content.toLowerCase() === prefix+'help') {     
-        msg.channel.send('\nCommand list:\n```fix\nr-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version \nr-about : about R.O.B. \nr-owner : who built the bot? \nr-stopxir : stops xir dead in his tracks```');
+        msg.channel.send('\nCommand list:\n```fix\nr-help : This List!\nr-ping : Pong! \nr-kill (mention user) : kills the mentiond user \nr-joke : jokes \nr-v : version \nr-about : about R.O.B. \nr-owner : who built the bot? \nr-stopxir : stops xir dead in his tracks \nRumia : Nitro Emote!```');
     }
     if (msg.content.toLowerCase().startsWith(prefix+'kill')) {
         if (msg.mentions.users.first() !== undefined ) {
@@ -62,6 +62,9 @@ client.on('message', async msg => {
     }
     if (msg.content.toLowerCase() === prefix+'stopxir') {     
         msg.channel.send(`<@218525899535024129>, don't make me throw cheese at you. <a:2000intslRumiaDance3:660908506911866930>`);
+    }
+    if (msg.content.toLowerCase() === 'rumia') {     
+        msg.channel.send(`<a:2000intslRumiaDance3:660908506911866930>`);
     }
 });
 
